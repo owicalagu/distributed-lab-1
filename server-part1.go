@@ -6,7 +6,7 @@ import (
 )
 
 func read() {
-	listener, err := net.Listen("tcp", ":22")
+	listener, err := net.Listen("tcp", ":3080")
 	if err != nil {
 		fmt.Println("error in listening")
 		return
