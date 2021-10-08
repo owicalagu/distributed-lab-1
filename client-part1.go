@@ -16,7 +16,11 @@ func connect() {
 	}
 
 	reader := bufio.NewReader(os.Stdin)
+	text, _ := reader.ReadString('\n')
+	_, _ = fmt.Fprintf(conn, text)
+
 	for {
+		fmt.Println("in for")
 		text, _ := reader.ReadString('\n')
 		_, _ = fmt.Fprintf(conn, text)
 	}
