@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"net"
+	"os"
 )
 
 func connect() {
@@ -12,7 +14,13 @@ func connect() {
 		fmt.Println(err)
 		return
 	}
-	_, _ = fmt.Fprintf(conn, "hi")
+
+	reader := bufio.NewReader(os.Stdin)
+	for {
+		text, _ := reader.ReadString('\n')
+		_, _ = fmt.Fprintf(conn, text)
+	}
+	//_, _ = fmt.Fprintf(conn, "hi")
 
 }
 
