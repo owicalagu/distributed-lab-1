@@ -16,5 +16,5 @@ func connect() {
 }
 
 func main() {
-
+	connect()
 }
