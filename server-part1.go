@@ -17,6 +17,7 @@ func read() {
 		if err != nil {
 			fmt.Println("error in accepting")
 		}
+		fmt.Println()
 		buf := make([]byte, 4096)
 		n, err := conn.Read(buf)
 		if err != nil {

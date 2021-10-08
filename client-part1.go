@@ -6,7 +6,7 @@ import (
 )
 
 func connect() {
-	conn, err := net.Dial("tcp", "172.31.95.134:34567")
+	conn, err := net.Dial("tcp", "3.86.143.115:34567")
 	if err != nil {
 		fmt.Println("error in connection")
 		fmt.Println(err)
