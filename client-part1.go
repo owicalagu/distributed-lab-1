@@ -6,12 +6,12 @@ import (
 )
 
 func connect() {
-	conn, err := net.Dial("tcp", "3.86.143.115:3080")
+	conn, err := net.Dial("tcp", "172.31.95.134:22")
 	if err != nil {
 		fmt.Println("error in connection")
 		return
 	}
-	fmt.Fprintf(conn, "hi")
+	_, _ = fmt.Fprintf(conn, "hi")
 
 }
 
